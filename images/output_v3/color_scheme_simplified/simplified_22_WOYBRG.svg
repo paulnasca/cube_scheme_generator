@@ -1,0 +1,54 @@
+<svg width="870" height="620">
+    <style>
+        .col_up { fill:white }
+        .col_down { fill:orange }
+        .col_front { fill:yellow }
+        .col_back { fill:blue }
+        .col_left { fill:red }
+        .col_right { fill: green }
+        </style>
+    <rect width="870" height="620" style="fill:#202020" stroke="gray" stroke-width="10"/>
+    <g transform="translate(20,60)">
+        <rect x="100" y="100" width="240" height="240" class="col_up"/>
+        <polygon points="0,400 400,400 300,300 100,300" class="col_front"/>
+        <polygon points="0,0 0,400 100,300 100,100" class="col_left"/>
+        <polygon points="0,0 400,0 300,100 100,100" class="col_back"/>
+        <polygon points="400,0 400,400 300,300 300,100" class="col_right"/>
+    </g>
+    <g transform="translate(450,60)">
+        <rect x="100" y="100" width="240" height="240" class="col_down"/>
+        <polygon points="0,400 400,400 300,300 100,300" class="col_back"/>
+        <polygon points="0,0 0,400 100,300 100,100" class="col_left"/>
+        <polygon points="0,0 400,0 300,100 100,100" class="col_front"/>
+        <polygon points="400,0 400,400 300,300 300,100" class="col_right"/>
+    </g>
+    <text id="label" x="435" y="47" font-size="55" font-weight="bold" style="text-anchor:middle" fill="white">(22) WOYBRG</text>
+       <g id="checkerboard" transform="translate(45,485) scale(0.38)">
+            <g transform="translate(0,0)">
+                <rect width="300" height="300" class="col_up"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_down" fill-rule="evenodd"/>
+            </g>
+            <g transform="translate(350,0)">
+                <rect width="300" height="300" class="col_front"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_back" fill-rule="evenodd"/>
+            </g>
+            <g transform="translate(700,0)">
+                <rect width="300" height="300" class="col_left"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_right" fill-rule="evenodd"/>
+            </g>
+
+            <g transform="translate(1050,0)">
+                <rect width="300" height="300" class="col_down"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_up" fill-rule="evenodd"/>
+            </g>
+            <g transform="translate(1400,0)">
+                <rect width="300" height="300" class="col_back"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_front" fill-rule="evenodd"/>
+            </g>
+            <g transform="translate(1750,0)">
+                <rect width="300" height="300" class="col_right"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_left" fill-rule="evenodd"/>
+            </g>
+        </g>
+
+</svg>

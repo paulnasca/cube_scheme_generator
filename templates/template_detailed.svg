@@ -1,0 +1,161 @@
+<svg width="1500" height="1100">
+    <rect width="1500" height="1100" style="fill:black"/>
+    <rect x="5" y="5" width="1490" height="1050" style="stroke-width:3;stroke:rgb(100,100,100)"/>
+    <style>
+    .col_up { fill:white }
+    .col_down { fill:yellow }
+    .col_front { fill:green }
+    .col_back { fill:blue }
+    .col_left { fill:orange }
+    .col_right { fill: red }
+    </style>
+    <g id="cube_image" transform="translate(40,70)">
+        <g id="top_layer" transform="translate(150,150)">
+            <rect x="-140" y="-120" width="600" height="660" style="stroke-width:2;stroke:rgb(80,80,80)"/>
+
+            <g id="UBL_corner">
+                <polygon points="-80,-100 -120,0 -80,100 -20,0" class="col_left" />
+                <polygon points="-80,-100 20,-75 80,0 -20,0" class="col_back"/>
+                <polygon points="-80,100  20,75 80,0 -20,0" class="col_up"/>
+            </g>
+
+            <g id="UBR_corner" transform="translate(320,0) scale(-1,1)">
+                <polygon points="-80,-100 -120,0 -80,100 -20,0" class="col_right" />
+                <polygon points="-80,-100 20,-75 80,0 -20,0" class="col_back"/>
+                <polygon points="-80,100  20,75 80,0 -20,0" class="col_up"/>
+            </g>
+
+            <g id="UFR_corner" transform="translate(320,400) scale(-1,-1)">
+                <polygon points="-80,-100 -120,0 -80,100 -20,0" class="col_right" />
+                <polygon points="-80,-100 20,-75 80,0 -20,0" class="col_front"/>
+                <polygon points="-80,100  20,75 80,0 -20,0" class="col_up"/>
+            </g>
+
+            <g id="UFL_corner" transform="translate(0,400) scale(1,-1)">
+                <polygon points="-80,-100 -120,0 -80,100 -20,0" class="col_left" />
+                <polygon points="-80,-100 20,-75 80,0 -20,0" class="col_front"/>
+                <polygon points="-80,100  20,75 80,0 -20,0" class="col_up"/>
+            </g>
+
+            <g id="UB_edge" transform="translate(160,0)">
+                <rect x="-60" y="0" width="120" height="60" class="col_up"/>
+                <rect x="-60" y="-60" width="120" height="60" class="col_back"/>
+            </g>
+        
+            <g id="UR_edge" transform="translate(370,200) rotate(90)">
+                <rect x="-60" y="0" width="120" height="60" class="col_up"/>
+                <rect x="-60" y="-60" width="120" height="60" class="col_right"/>
+            </g>
+
+            <g id="UL_edge" transform="translate(-50,200) rotate(-90)">
+                <rect x="-60" y="0" width="120" height="60" class="col_up"/>
+                <rect x="-60" y="-60" width="120" height="60" class="col_left"/>
+            </g>
+
+            <g id="UF_edge" transform="translate(160,400) rotate(-180)">
+                <rect x="-60" y="0" width="120" height="60" class="col_up"/>
+                <rect x="-60" y="-60" width="120" height="60" class="col_front"/>
+            </g>
+        </g>
+        
+        <g id="middle_layer" transform="translate(715,150)">
+            <g id="FL_edge" transform="translate(0,0)">
+                    <rect x="-60" y="-60" width="120" height="60" class="col_front"/>
+                    <rect x="-60" y="0" width="120" height="60" class="col_left"/>
+            </g>
+            
+            <g id="LB_edge" transform="translate(0,150)">
+                    <rect x="-60" y="-60" width="120" height="60" class="col_left"/>
+                    <rect x="-60" y="0" width="120" height="60" class="col_back"/>
+            </g>
+            <g id="BR_edge" transform="translate(0,300)">
+                    <rect x="-60" y="-60" width="120" height="60" class="col_back"/>
+                    <rect x="-60" y="0" width="120" height="60" class="col_right"/>
+            </g>
+            <g id="RF_edge" transform="translate(0,450)">
+                    <rect x="-60" y="-60" width="120" height="60" class="col_right"/>
+                    <rect x="-60" y="0" width="120" height="60" class="col_front"/>
+            </g>
+        </g>
+
+        <g id="down_layer" transform="translate(950,150)">
+            <rect x="-140" y="-120" width="600" height="660" style="stroke-width:2;stroke:rgb(80,80,80)"/>
+
+            <g id="DFL_corner">
+                <polygon points="-80,-100 -120,0 -80,100 -20,0" class="col_left" />
+                <polygon points="-80,-100 20,-75 80,0 -20,0" class="col_front"/>
+                <polygon points="-80,100  20,75 80,0 -20,0" class="col_down"/>
+            </g>
+
+            <g id="DFR_corner" transform="translate(320,0) scale(-1,1)">
+                <polygon points="-80,-100 -120,0 -80,100 -20,0" class="col_right" />
+                <polygon points="-80,-100 20,-75 80,0 -20,0" class="col_front"/>
+                <polygon points="-80,100  20,75 80,0 -20,0" class="col_down"/>
+            </g>
+
+            <g id="DBR_corner" transform="translate(320,400) scale(-1,-1)">
+                <polygon points="-80,-100 -120,0 -80,100 -20,0" class="col_right" />
+                <polygon points="-80,-100 20,-75 80,0 -20,0" class="col_back"/>
+                <polygon points="-80,100  20,75 80,0 -20,0" class="col_down"/>
+            </g>
+
+            <g id="DBL_corner" transform="translate(0,400) scale(1,-1)">
+                <polygon points="-80,-100 -120,0 -80,100 -20,0" class="col_left" />
+                <polygon points="-80,-100 20,-75 80,0 -20,0" class="col_back"/>
+                <polygon points="-80,100  20,75 80,0 -20,0" class="col_down"/>
+            </g>
+
+            <g id="DF_edge" transform="translate(160,0)">
+                <rect x="-60" y="0" width="120" height="60" class="col_down"/>
+                <rect x="-60" y="-60" width="120" height="60" class="col_front"/>
+            </g>
+        
+            <g id="DR_edge" transform="translate(370,200) rotate(90)">
+                <rect x="-60" y="0" width="120" height="60" class="col_down"/>
+                <rect x="-60" y="-60" width="120" height="60" class="col_right"/>
+            </g>
+
+            <g id="DL_edge" transform="translate(-50,200) rotate(-90)">
+                <rect x="-60" y="0" width="120" height="60" class="col_down"/>
+                <rect x="-60" y="-60" width="120" height="60" class="col_left"/>
+            </g>
+
+            <g id="DB_edge" transform="translate(160,400) rotate(-180)">
+                <rect x="-60" y="0" width="120" height="60" class="col_down"/>
+                <rect x="-60" y="-60" width="120" height="60" class="col_back"/>
+            </g>
+        </g>
+        
+        <g id="checkerboard" transform="translate(50,740) scale(0.64)">
+            <g transform="translate(0,0)">
+                <rect width="300" height="300" class="col_up"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_down" fill-rule="evenodd"/>
+            </g>
+            <g transform="translate(350,0)">
+                <rect width="300" height="300" class="col_front"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_back" fill-rule="evenodd"/>
+            </g>
+            <g transform="translate(700,0)">
+                <rect width="300" height="300" class="col_left"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_right" fill-rule="evenodd"/>
+            </g>
+
+            <g transform="translate(1050,0)">
+                <rect width="300" height="300" class="col_down"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_up" fill-rule="evenodd"/>
+            </g>
+            <g transform="translate(1400,0)">
+                <rect width="300" height="300" class="col_back"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_front" fill-rule="evenodd"/>
+            </g>
+            <g transform="translate(1750,0)">
+                <rect width="300" height="300" class="col_right"/>
+                <path d="M0,100h300v100h-300z M100,0h100v300h-100z" class="col_left" fill-rule="evenodd"/>
+            </g>
+        </g>
+
+    </g>
+    <text id="label" x="750" y="70" font-size="65" font-weight="bold" style="text-anchor:middle" fill="white">
+        TEXT_LABEL
+    </text>
+</svg>
