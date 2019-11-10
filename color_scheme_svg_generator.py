@@ -137,7 +137,7 @@ if __name__ == "__main__":
         ("template_simplified.svg", "color_scheme_simplified", "simplified"),
         ("template_detailed.svg", "color_scheme_detailed", "detailed"),
         ("template_checkerboard.svg", "color_scheme_checkerboard", "checkerboard"),
-
+        ("template_flat.svg", "color_scheme_flat", "flat"),
     ]
     # Make the images
     for input_svg_template, out_dir_name, out_prefix in TEMPLATES_WITH_OUTPUT:

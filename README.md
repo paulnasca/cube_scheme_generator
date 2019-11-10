@@ -22,6 +22,8 @@ In the simplified form the edges are represented by the intersection of two colo
 The checkerboard-only images are also generated:
 ![cBOY](images/checkerboard_01_WYGBOR.png)
 
+The flat (unfolded) images are also generated:
+![fBOY](images/flat_01_WYGBOR.png)
 
 Another example with real photo
 -------------------------------

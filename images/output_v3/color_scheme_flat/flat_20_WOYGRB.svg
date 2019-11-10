@@ -1,0 +1,48 @@
+<svg width="1105" height="885">
+    <rect width="1105" height="885" style="fill:black"/>
+    <rect x="5" y="5" width="1090" height="870" style="stroke-width:3;stroke:rgb(100,100,100)"/>
+    <style>
+        .col_up { fill:white }
+        .col_down { fill:orange }
+        .col_front { fill:yellow }
+        .col_back { fill:green }
+        .col_left { fill:red }
+        .col_right { fill: blue }
+        </style>
+   
+    <g id="cube" transform="translate(50,100) scale(0.835)">
+        <g transform="translate(0,300)">
+            <rect width="300" height="300" class="col_left"/>
+            <path d="M0,100h300z M0,200h300z M100,0v300z M200,0v300z M0,0h300v300h-300z" fill="none" style="stroke:black;stroke-width:5"/>
+            <text x="147" y="167" font-size="50" font-weight="bold" style="text-anchor:middle" fill="black">L</text>
+        </g>
+        <g transform="translate(300,300)">
+            <rect width="300" height="300" class="col_front"/>
+            <path d="M0,100h300z M0,200h300z M100,0v300z M200,0v300z M0,0h300v300h-300z" fill="none" style="stroke:black;stroke-width:5"/>
+            <text x="147" y="167" font-size="50" font-weight="bold" style="text-anchor:middle" fill="black">F</text>
+        </g>
+        <g transform="translate(300,0)">
+            <rect width="300" height="300" class="col_up"/>
+            <path d="M0,100h300z M0,200h300z M100,0v300z M200,0v300z M0,0h300v300h-300z" fill="none" style="stroke:black;stroke-width:5"/>
+            <text x="147" y="167" font-size="50" font-weight="bold" style="text-anchor:middle" fill="black">U</text>
+        </g>
+        <g transform="translate(300,600)">
+            <rect width="300" height="300" class="col_down"/>
+            <path d="M0,100h300z M0,200h300z M100,0v300z M200,0v300z M0,0h300v300h-300z" fill="none" style="stroke:black;stroke-width:5"/>
+            <text x="147" y="167" font-size="50" font-weight="bold" style="text-anchor:middle" fill="black">D</text>
+        </g>
+        <g transform="translate(600,300)">
+            <rect width="300" height="300" class="col_right"/>
+            <path d="M0,100h300z M0,200h300z M100,0v300z M200,0v300z M0,0h300v300h-300z" fill="none" style="stroke:black;stroke-width:5"/>
+            <text x="147" y="167" font-size="50" font-weight="bold" style="text-anchor:middle" fill="black">R</text>
+        </g>
+        <g transform="translate(900,300)">
+            <rect width="300" height="300" class="col_back"/>
+            <path d="M0,100h300z M0,200h300z M100,0v300z M200,0v300z M0,0h300v300h-300z" fill="none" style="stroke:black;stroke-width:5"/>
+            <text x="147" y="167" font-size="50" font-weight="bold" style="text-anchor:middle" fill="black">B</text>
+        </g>
+    </g>
+
+
+    <text id="label" x="550" y="70" font-size="60" font-weight="bold" style="text-anchor:middle" fill="white">(20) WOYGRB</text>
+</svg>
