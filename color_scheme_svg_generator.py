@@ -78,7 +78,7 @@ def generate_basic_unique_color_schemes_WYGBOR():
     return all_unique_colors_schemes
 
 
-def make_all_colors_schemes_svg(colors_schemes, svg_template_fn, output_svg_fn_prefix):
+def make_all_colors_schemes_svg(colors_schemes, svg_template_fn, output_svg_fn_prefix, out_mode):
     """ Generate images with the cube color schemes
         The output directory is automatically generated
 
@@ -86,10 +86,14 @@ def make_all_colors_schemes_svg(colors_schemes, svg_template_fn, output_svg_fn_p
         colors_schemes {list(k,string,string)} -- color schemes
         svg_template_fn {string} -- svg template filename
         output_svg_fn_prefix {string} -- prefix of the output svg file names
+        out_mode (string or None) -- the mode of image generation (None for default or "summary")
     """
 
     os.makedirs(os.path.dirname(output_svg_fn_prefix), exist_ok=True)
     svg_template_text = open(svg_template_fn, "r").read()
+
+    if out_mode == "summary":
+        colors_schemes = colors_schemes[::2]
 
     for k, current_scheme, scheme_description in colors_schemes:
         svg_tree = etree.fromstring(svg_template_text)
@@ -133,20 +137,23 @@ def make_all_colors_schemes_svg(colors_schemes, svg_template_fn, output_svg_fn_p
 
 if __name__ == "__main__":
     TEMPLATES_WITH_OUTPUT = [
-        # The templates as tuples of (input svg_template, output_directory_name, output_prefix)
-        ("template_simplified.svg", "color_scheme_simplified", "simplified"),
-        ("template_detailed.svg", "color_scheme_detailed", "detailed"),
-        ("template_checkerboard.svg", "color_scheme_checkerboard", "checkerboard"),
-        ("template_flat.svg", "color_scheme_flat", "flat"),
+        # The templates as tuples of (input svg_template, output_directory_name, output_prefix, mode)
+        ("template_simplified.svg", "color_scheme_simplified", "simplified", None),
+        ("template_detailed.svg", "color_scheme_detailed", "detailed", None),
+        ("template_checkerboard.svg",
+         "color_scheme_checkerboard", "checkerboard", None),
+        ("template_flat.svg", "color_scheme_flat", "flat", None),
+        ("template_checkerboard_summary.svg",
+         "color_scheme_checkerboard_summary", "checkerboard_summary", "summary"),
     ]
     # Make the images
-    for input_svg_template, out_dir_name, out_prefix in TEMPLATES_WITH_OUTPUT:
+    for input_svg_template, out_dir_name, out_prefix, out_mode in TEMPLATES_WITH_OUTPUT:
         print(
             f'Generating {len(UNIQUE_COLOR_SCHEME)} images for "{out_dir_name}".')
         svg_template_fn = os.path.join(os.path.dirname(
             __file__), "templates", input_svg_template)
         make_all_colors_schemes_svg(
-            UNIQUE_COLOR_SCHEME, svg_template_fn, os.path.join("output", out_dir_name, out_prefix))
+            UNIQUE_COLOR_SCHEME, svg_template_fn, os.path.join("output", out_dir_name, out_prefix), out_mode)
 
     # The output can be assemblend into a single image with the command:
     #  montage *.svg -geometry +30+30 -background black -tile 6x all_schemes.png

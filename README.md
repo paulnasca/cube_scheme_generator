@@ -49,6 +49,11 @@ The output:
 The resulting images are available by clicking the image below:  
 [![BOY](images/all_simplfied_schemes_thumb.png)](images/output_v3)
 
+
+A summary of checkerboard images (which ignores the mirror schemes) can be also generate:
+[![checkerboard_summary](images/color_schemes_checkerboard_summary.jpg)](images/output_v3)
+
+
 License:
 =======
 Public domain or CC0
